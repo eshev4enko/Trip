@@ -1,0 +1,262 @@
+!!!
+%html{:lang => "ru"}
+    = Haml::Engine.new(File.read('../haml/head.haml')).render(Object, :title => "Тест")
+    %body
+        .wrapper
+            = Haml::Engine.new(File.read('../haml/header.haml')).render
+            %main
+                .trip-bg-inner
+                    .trip-social
+                        %span Share this itinerary:
+                        %a{href:"#"}
+                            %i.fa.fa-facebook-square
+                        %a{href:"#"}
+                            %i.fa.fa-twitter-square
+                    .trip-list-wrap
+                        .trip-title-box
+                            %span Itinerary
+                            %h2 Trip to Fabulous Las Vegas
+                        %ul.trip-list
+                            %span.trip-list-number 2 days
+                            %li
+                                %a{href:"#", :class => "list-pict"}
+                                    %img{src:"../img/img-640/family.png"}
+                                    %span.list-pict-txt family
+                            %li
+                                %a{href:"#", :class => "list-pict"}
+                                    %img{src:"../img/img-640/eat.png"}
+                                    %span.list-pict-txt foodie
+                            %li
+                                %a{href:"#", :class => "list-pict"}
+                                    %img{src:"../img/img-640/basket.png"}
+                                    %span.list-pict-txt shopping
+                            %li
+                                %a{href:"#", :class => "list-pict"}
+                                    %img{src:"../img/img-640/dog.png"}
+                                    %span.list-pict-txt pet frienly
+
+                .container.box-wrap
+                    .row.clearfix
+                        .info-trip-wrap.col-md-12
+                            .info-box-inner.col-md-6
+                                .expert-block.clearfix
+                                    .expert-data
+                                        %span Local Expert
+                                        %span Audrey Tautou
+                                        .starbox
+                                            %i.fa.fa-star
+                                            %i.fa.fa-star
+                                            %i.fa.fa-star
+                                            %i.fa.fa-star.offpoint
+                                            %i.fa.fa-star.offpoint
+
+
+                                .progress-wrap
+                                    .progress-inner
+                                        %span.left-side Buget
+                                        .progress
+                                            .progress-bar.bar-inner{:role => "progressbar", :style => "width: 70%;"}
+                                                %span.sr-only 70%
+                                        %span.right-side Luxury
+
+                                    .progress-inner
+                                        %span.left-side Relaxed
+                                        .progress
+                                            .progress-bar.bar-inner{:role => "progressbar", :style => "width: 50%;"}
+                                                %span.sr-only 50%
+                                        %span.right-side Active
+
+                                    .progress-inner
+                                        %span.left-side Desolate
+                                        .progress
+                                            .progress-bar.bar-inner{:role => "progressbar", :style => "width: 30%;"}
+                                                %span.sr-only 30%
+                                        %span.right-side Crowdy
+
+                            .overview-block.col-md-6
+                                %h3 Overview
+                                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+                                .inner-txt
+                                    %p Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus... ut, vehicula eu diam.
+                                    %p Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+
+                                %i#showHideContent.fa.fa-angle-down
+
+                    .trip-map
+                        .trip-day.clearfix
+                            .title-wrap
+                                %h3.trip-day-title Day 1
+
+                            %input.hide#hd-1{:type => "checkbox"}
+                            %label.fa.fa-angle-down.active-label{:for => "hd-1"}
+
+                            .hide-box.active-hide-box.col-md-12
+                                .first-top.col-md-6
+                                    .map.hide-day-box
+                                        %iframe{:src => "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d23381609.546050932!2d-108.72811200824799!3d44.32638650649397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x80990aa1f8deb471%3A0xcf47038aaafc95b3!2sNevada%2C+United+States!3m2!1d38.8026097!2d-116.419389!4m5!1s0x87938dc8b50cfced%3A0xa127900c0ff30ac4!2sNebraska%2C+United+States!3m2!1d41.492537399999996!2d-99.9018131!5e0!3m2!1suk!2sua!4v1445952165295"}
+                                    .photo-report.hide-day-box
+                                        .report-inner.middle-report.clearfix
+                                            .dash-line
+                                                %span 15.00
+                                            .pict-line
+                                                %figure
+                                                    %img{src:"../img/img-640/fountain-photo.jpg", :width => "470", :height => "283"}
+                                                %figcaption
+                                                    %span Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia
+                                                    .show-map
+                                                        %i.fa.fa-map-marker
+                                                        %span Show on the map
+
+
+                                .second-top.col-md-6
+                                    .photo-report.hide-day-box
+                                        .report-inner.clearfix
+                                            .dash-line
+                                                %span 10.00
+                                            .pict-line
+                                                %figure
+                                                    %img{src:"../img/img-640/las-vegas-photo.jpg", :width => "470", :height => "310"}
+                                                %figcaption
+                                                    %span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    .show-map
+                                                        %i.fa.fa-map-marker
+                                                        %span Show on the map
+
+
+                                    .photo-report.hide-day-box
+                                        .report-inner.clearfix
+                                            .dash-line.dash-line-last
+                                                %span 18.00
+                                            .pict-line
+                                                %figure
+                                                    %img.gondola-mid{src:"../img/img-992/gondola-photo.jpg", :width => "340", :height => "138"}
+                                                    %img.gondola-small{src:"../img/img-640/gondola-photo.jpg", :width => "470", :height => "284"}
+                                                %figcaption
+                                                    %span Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
+                                                    .show-map
+                                                        %i.fa.fa-map-marker
+                                                        %span Show on the map
+
+                        .trip-day.clearfix
+                            .title-wrap
+                                %h3.trip-day-title Day 2
+
+                            %input.hide#hd-2{:type => "checkbox"}
+                            %label.fa.fa-angle-down{:for => "hd-2"}
+
+                            .hide-box.col-md-12
+                                .first-top.col-md-6
+                                    .map.hide-day-box
+                                        %iframe{:src => "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d23381609.546050932!2d-108.72811200824799!3d44.32638650649397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x80990aa1f8deb471%3A0xcf47038aaafc95b3!2sNevada%2C+United+States!3m2!1d38.8026097!2d-116.419389!4m5!1s0x87938dc8b50cfced%3A0xa127900c0ff30ac4!2sNebraska%2C+United+States!3m2!1d41.492537399999996!2d-99.9018131!5e0!3m2!1suk!2sua!4v1445952165295"}
+                                    .photo-report.hide-day-box
+                                        .report-inner.middle-report.clearfix
+                                            .dash-line
+                                                %span 15.00
+                                            .pict-line
+                                                %figure
+                                                    %img{src:"../img/img-640/fountain-photo.jpg", :width => "470", :height => "283"}
+                                                %figcaption
+                                                    %span Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia
+                                                    .show-map
+                                                        %i.fa.fa-map-marker
+                                                        %span Show on the map
+
+
+                                .second-top.col-md-6
+                                    .photo-report.hide-day-box
+                                        .report-inner.clearfix
+                                            .dash-line
+                                                %span 10.00
+                                            .pict-line
+                                                %figure
+                                                    %img{src:"../img/img-640/las-vegas-photo.jpg", :width => "470", :height => "310"}
+                                                %figcaption
+                                                    %span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    .show-map
+                                                        %i.fa.fa-map-marker
+                                                        %span Show on the map
+
+
+                                    .photo-report.hide-day-box
+                                        .report-inner.clearfix
+                                            .dash-line.dash-line-last
+                                                %span 18.00
+                                            .pict-line
+                                                %figure
+                                                    %img.gondola-mid{src:"../img/img-992/gondola-photo.jpg", :width => "340", :height => "138"}
+                                                    %img.gondola-small{src:"../img/img-640/gondola-photo.jpg", :width => "470", :height => "284"}
+                                                %figcaption
+                                                    %span Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
+                                                    .show-map
+                                                        %i.fa.fa-map-marker
+                                                        %span Show on the map
+
+
+                        .trip-day.clearfix
+                            .title-wrap
+                                %h3.trip-day-title Day 3
+
+                            %input.hide#hd-3{:type => "checkbox"}
+                            %label.fa.fa-angle-down{:for => "hd-3"}
+
+                            .hide-box.col-md-12
+                                .first-top.col-md-6
+                                    .map.hide-day-box
+                                        %iframe{:src => "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d23381609.546050932!2d-108.72811200824799!3d44.32638650649397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x80990aa1f8deb471%3A0xcf47038aaafc95b3!2sNevada%2C+United+States!3m2!1d38.8026097!2d-116.419389!4m5!1s0x87938dc8b50cfced%3A0xa127900c0ff30ac4!2sNebraska%2C+United+States!3m2!1d41.492537399999996!2d-99.9018131!5e0!3m2!1suk!2sua!4v1445952165295"}
+                                    .photo-report.hide-day-box
+                                        .report-inner.middle-report.clearfix
+                                            .dash-line
+                                                %span 15.00
+                                            .pict-line
+                                                %figure
+                                                    %img{src:"../img/img-640/fountain-photo.jpg", :width => "470", :height => "283"}
+                                                %figcaption
+                                                    %span Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia
+                                                    .show-map
+                                                        %i.fa.fa-map-marker
+                                                        %span Show on the map
+
+
+                                .second-top.col-md-6
+                                    .photo-report.hide-day-box
+                                        .report-inner.clearfix
+                                            .dash-line
+                                                %span 10.00
+                                            .pict-line
+                                                %figure
+                                                    %img{src:"../img/img-640/las-vegas-photo.jpg", :width => "470", :height => "310"}
+                                                %figcaption
+                                                    %span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    .show-map
+                                                        %i.fa.fa-map-marker
+                                                        %span Show on the map
+
+
+                                    .photo-report.hide-day-box
+                                        .report-inner.clearfix
+                                            .dash-line.dash-line-last
+                                                %span 18.00
+                                            .pict-line
+                                                %figure
+                                                    %img.gondola-mid{src:"../img/img-992/gondola-photo.jpg", :width => "340", :height => "138"}
+                                                    %img.gondola-small{src:"../img/img-640/gondola-photo.jpg", :width => "470", :height => "284"}
+                                                %figcaption
+                                                    %span Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
+                                                    .show-map
+                                                        %i.fa.fa-map-marker
+                                                        %span Show on the map
+
+
+                    .browse-itinerary
+                        %img{src:"../img/img-640/snake.png"}
+                        %h3 Want more itineraries?
+                        %span Use the marketplace to find the itinerery with different cities and activities
+                        %button
+                            %span browse itinerary
+                        %a{href:"#"} learn more
+
+            = Haml::Engine.new(File.read('../haml/footer.haml')).render
+
+
+        %script{src:"../js/jquery-1.11.3.js"}
+        %script{src:"../js/main.js"}

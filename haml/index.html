@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang='ru'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <title>Trip</title>
+    <link href='../css/style.css' rel='stylesheet'>
+    <link href='../css/fonts.css' rel='stylesheet'>
+    <link href='../css/bootstrap.css' rel='stylesheet'>
+  </head>
+  <body>
+    <div class='wrapper'>
+      <header>
+        <div class='dropdown-menu'>
+          <svg class='gamburger-menu' viewBox='0 0 50 34' xmlns='http://www.w3.org/2000/svg'>
+            <path d='M0 34v-6h50v6H0zm0-20h50v6H0v-6zM0 0h50v6H0V0z' fill='#433B25'></path>
+          </svg>
+        </div>
+        <ul class='header-list'>
+          <li>
+            <a class='header-active-link' href='../haml/index.html'>
+              <img src='../img/svg/binoculars.svg'>
+              <span class='list-txt'>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href='../haml/details.html'>
+              <img src='../img/svg/details.svg'>
+              <span class='list-txt'>Details</span>
+            </a>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <div class='trip-bg-inner'>
+          <div class='trip-social'>
+            <span>Share this itinerary:</span>
+            <a href='#'>
+              <i class='fa fa-facebook-square'></i>
+            </a>
+            <a href='#'>
+              <i class='fa fa-twitter-square'></i>
+            </a>
+          </div>
+          <div class='trip-list-wrap'>
+            <div class='trip-title-box'>
+              <span>Itinerary</span>
+              <h2>Trip to Fabulous Las Vegas</h2>
+            </div>
+            <ul class='trip-list'>
+              <span class='trip-list-number'>2 days</span>
+              <li>
+                <a class='list-pict' href='#'>
+                  <img src='../img/img-640/family.png'>
+                  <span class='list-pict-txt'>family</span>
+                </a>
+              </li>
+              <li>
+                <a class='list-pict' href='#'>
+                  <img src='../img/img-640/eat.png'>
+                  <span class='list-pict-txt'>foodie</span>
+                </a>
+              </li>
+              <li>
+                <a class='list-pict' href='#'>
+                  <img src='../img/img-640/basket.png'>
+                  <span class='list-pict-txt'>shopping</span>
+                </a>
+              </li>
+              <li>
+                <a class='list-pict' href='#'>
+                  <img src='../img/img-640/dog.png'>
+                  <span class='list-pict-txt'>pet frienly</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class='container box-wrap'>
+          <div class='row clearfix'>
+            <div class='info-trip-wrap col-md-12'>
+              <div class='info-box-inner col-md-6'>
+                <div class='expert-block clearfix'>
+                  <div class='expert-data'>
+                    <span>Local Expert</span>
+                    <span>Audrey Tautou</span>
+                    <div class='starbox'>
+                      <i class='fa fa-star'></i>
+                      <i class='fa fa-star'></i>
+                      <i class='fa fa-star'></i>
+                      <i class='fa fa-star offpoint'></i>
+                      <i class='fa fa-star offpoint'></i>
+                    </div>
+                  </div>
+                </div>
+                <div class='progress-wrap'>
+                  <div class='progress-inner'>
+                    <span class='left-side'>Buget</span>
+                    <div class='progress'>
+                      <div class='progress-bar bar-inner' role='progressbar' style='width: 70%;'>
+                        <span class='sr-only'>70%</span>
+                      </div>
+                    </div>
+                    <span class='right-side'>Luxury</span>
+                  </div>
+                  <div class='progress-inner'>
+                    <span class='left-side'>Relaxed</span>
+                    <div class='progress'>
+                      <div class='progress-bar bar-inner' role='progressbar' style='width: 50%;'>
+                        <span class='sr-only'>50%</span>
+                      </div>
+                    </div>
+                    <span class='right-side'>Active</span>
+                  </div>
+                  <div class='progress-inner'>
+                    <span class='left-side'>Desolate</span>
+                    <div class='progress'>
+                      <div class='progress-bar bar-inner' role='progressbar' style='width: 30%;'>
+                        <span class='sr-only'>30%</span>
+                      </div>
+                    </div>
+                    <span class='right-side'>Crowdy</span>
+                  </div>
+                </div>
+              </div>
+              <div class='overview-block col-md-6'>
+                <h3>Overview</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</p>
+                <div class='inner-txt'>
+                  <p>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus... ut, vehicula eu diam.</p>
+                  <p>Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</p>
+                </div>
+                <i class='fa fa-angle-down' id='showHideContent'></i>
+              </div>
+            </div>
+          </div>
+          <div class='trip-map'>
+            <div class='trip-day clearfix'>
+              <div class='title-wrap'>
+                <h3 class='trip-day-title'>Day 1</h3>
+              </div>
+              <input class='hide' id='hd-1' type='checkbox'>
+              <label class='fa fa-angle-down active-label' for='hd-1'></label>
+              <div class='hide-box active-hide-box col-md-12'>
+                <div class='first-top col-md-6'>
+                  <div class='map hide-day-box'>
+                    <iframe src='https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d23381609.546050932!2d-108.72811200824799!3d44.32638650649397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x80990aa1f8deb471%3A0xcf47038aaafc95b3!2sNevada%2C+United+States!3m2!1d38.8026097!2d-116.419389!4m5!1s0x87938dc8b50cfced%3A0xa127900c0ff30ac4!2sNebraska%2C+United+States!3m2!1d41.492537399999996!2d-99.9018131!5e0!3m2!1suk!2sua!4v1445952165295'></iframe>
+                  </div>
+                  <div class='photo-report hide-day-box'>
+                    <div class='report-inner middle-report clearfix'>
+                      <div class='dash-line'>
+                        <span>15.00</span>
+                      </div>
+                      <div class='pict-line'>
+                        <figure>
+                          <img height='283' src='../img/img-640/fountain-photo.jpg' width='470'>
+                        </figure>
+                        <figcaption>
+                          <span>Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia</span>
+                          <div class='show-map'>
+                            <i class='fa fa-map-marker'></i>
+                            <span>Show on the map</span>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='second-top col-md-6'>
+                  <div class='photo-report hide-day-box'>
+                    <div class='report-inner clearfix'>
+                      <div class='dash-line'>
+                        <span>10.00</span>
+                      </div>
+                      <div class='pict-line'>
+                        <figure>
+                          <img height='310' src='../img/img-640/las-vegas-photo.jpg' width='470'>
+                        </figure>
+                        <figcaption>
+                          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                          <div class='show-map'>
+                            <i class='fa fa-map-marker'></i>
+                            <span>Show on the map</span>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='photo-report hide-day-box'>
+                    <div class='report-inner clearfix'>
+                      <div class='dash-line dash-line-last'>
+                        <span>18.00</span>
+                      </div>
+                      <div class='pict-line'>
+                        <figure>
+                          <img class='gondola-mid' height='138' src='../img/img-992/gondola-photo.jpg' width='340'>
+                          <img class='gondola-small' height='284' src='../img/img-640/gondola-photo.jpg' width='470'>
+                        </figure>
+                        <figcaption>
+                          <span>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</span>
+                          <div class='show-map'>
+                            <i class='fa fa-map-marker'></i>
+                            <span>Show on the map</span>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='trip-day clearfix'>
+              <div class='title-wrap'>
+                <h3 class='trip-day-title'>Day 2</h3>
+              </div>
+              <input class='hide' id='hd-2' type='checkbox'>
+              <label class='fa fa-angle-down' for='hd-2'></label>
+              <div class='hide-box col-md-12'>
+                <div class='first-top col-md-6'>
+                  <div class='map hide-day-box'>
+                    <iframe src='https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d23381609.546050932!2d-108.72811200824799!3d44.32638650649397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x80990aa1f8deb471%3A0xcf47038aaafc95b3!2sNevada%2C+United+States!3m2!1d38.8026097!2d-116.419389!4m5!1s0x87938dc8b50cfced%3A0xa127900c0ff30ac4!2sNebraska%2C+United+States!3m2!1d41.492537399999996!2d-99.9018131!5e0!3m2!1suk!2sua!4v1445952165295'></iframe>
+                  </div>
+                  <div class='photo-report hide-day-box'>
+                    <div class='report-inner middle-report clearfix'>
+                      <div class='dash-line'>
+                        <span>15.00</span>
+                      </div>
+                      <div class='pict-line'>
+                        <figure>
+                          <img height='283' src='../img/img-640/fountain-photo.jpg' width='470'>
+                        </figure>
+                        <figcaption>
+                          <span>Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia</span>
+                          <div class='show-map'>
+                            <i class='fa fa-map-marker'></i>
+                            <span>Show on the map</span>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='second-top col-md-6'>
+                  <div class='photo-report hide-day-box'>
+                    <div class='report-inner clearfix'>
+                      <div class='dash-line'>
+                        <span>10.00</span>
+                      </div>
+                      <div class='pict-line'>
+                        <figure>
+                          <img height='310' src='../img/img-640/las-vegas-photo.jpg' width='470'>
+                        </figure>
+                        <figcaption>
+                          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                          <div class='show-map'>
+                            <i class='fa fa-map-marker'></i>
+                            <span>Show on the map</span>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='photo-report hide-day-box'>
+                    <div class='report-inner clearfix'>
+                      <div class='dash-line dash-line-last'>
+                        <span>18.00</span>
+                      </div>
+                      <div class='pict-line'>
+                        <figure>
+                          <img class='gondola-mid' height='138' src='../img/img-992/gondola-photo.jpg' width='340'>
+                          <img class='gondola-small' height='284' src='../img/img-640/gondola-photo.jpg' width='470'>
+                        </figure>
+                        <figcaption>
+                          <span>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</span>
+                          <div class='show-map'>
+                            <i class='fa fa-map-marker'></i>
+                            <span>Show on the map</span>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='trip-day clearfix'>
+              <div class='title-wrap'>
+                <h3 class='trip-day-title'>Day 3</h3>
+              </div>
+              <input class='hide' id='hd-3' type='checkbox'>
+              <label class='fa fa-angle-down' for='hd-3'></label>
+              <div class='hide-box col-md-12'>
+                <div class='first-top col-md-6'>
+                  <div class='map hide-day-box'>
+                    <iframe src='https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d23381609.546050932!2d-108.72811200824799!3d44.32638650649397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x80990aa1f8deb471%3A0xcf47038aaafc95b3!2sNevada%2C+United+States!3m2!1d38.8026097!2d-116.419389!4m5!1s0x87938dc8b50cfced%3A0xa127900c0ff30ac4!2sNebraska%2C+United+States!3m2!1d41.492537399999996!2d-99.9018131!5e0!3m2!1suk!2sua!4v1445952165295'></iframe>
+                  </div>
+                  <div class='photo-report hide-day-box'>
+                    <div class='report-inner middle-report clearfix'>
+                      <div class='dash-line'>
+                        <span>15.00</span>
+                      </div>
+                      <div class='pict-line'>
+                        <figure>
+                          <img height='283' src='../img/img-640/fountain-photo.jpg' width='470'>
+                        </figure>
+                        <figcaption>
+                          <span>Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia</span>
+                          <div class='show-map'>
+                            <i class='fa fa-map-marker'></i>
+                            <span>Show on the map</span>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class='second-top col-md-6'>
+                  <div class='photo-report hide-day-box'>
+                    <div class='report-inner clearfix'>
+                      <div class='dash-line'>
+                        <span>10.00</span>
+                      </div>
+                      <div class='pict-line'>
+                        <figure>
+                          <img height='310' src='../img/img-640/las-vegas-photo.jpg' width='470'>
+                        </figure>
+                        <figcaption>
+                          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                          <div class='show-map'>
+                            <i class='fa fa-map-marker'></i>
+                            <span>Show on the map</span>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='photo-report hide-day-box'>
+                    <div class='report-inner clearfix'>
+                      <div class='dash-line dash-line-last'>
+                        <span>18.00</span>
+                      </div>
+                      <div class='pict-line'>
+                        <figure>
+                          <img class='gondola-mid' height='138' src='../img/img-992/gondola-photo.jpg' width='340'>
+                          <img class='gondola-small' height='284' src='../img/img-640/gondola-photo.jpg' width='470'>
+                        </figure>
+                        <figcaption>
+                          <span>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</span>
+                          <div class='show-map'>
+                            <i class='fa fa-map-marker'></i>
+                            <span>Show on the map</span>
+                          </div>
+                        </figcaption>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='browse-itinerary'>
+            <img src='../img/img-640/snake.png'>
+            <h3>Want more itineraries?</h3>
+            <span>Use the marketplace to find the itinerery with different cities and activities</span>
+            <button>
+              <span>browse itinerary</span>
+            </button>
+            <a href='#'>learn more</a>
+          </div>
+        </div>
+      </main>
+      <footer class='clearfix'>
+        <ul>
+          <li>
+            <a href='#'>Home</a>
+          </li>
+          <li>
+            <a href='#'>Itineraries</a>
+          </li>
+          <li>
+            <a href='#'>About</a>
+          </li>
+        </ul>
+        <div class='footer-logo'>
+          <img src='../img/img-640/footer-logo.png'>
+        </div>
+        <div class='footer-copy'>
+          <div class='footer-social'>
+            <a href='#'>
+              <i class='fa fa-facebook-square'></i>
+            </a>
+            <a href='#'>
+              <i class='fa fa-twitter-square'></i>
+            </a>
+          </div>
+          <span>(c) Wanderist 2014</span>
+        </div>
+      </footer>
+    </div>
+    <script src='../js/jquery-1.11.3.js'></script>
+    <script src='../js/main.js'></script>
+  </body>
+</html>

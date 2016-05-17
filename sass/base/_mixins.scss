@@ -1,0 +1,106 @@
+
+@mixin font($font-weight, $font-size, $line-height, $font-family) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-family;
+}
+
+@mixin position {
+  @content;
+}
+
+@mixin svg($fill, $svg-width, $svg-height) {
+  fill: $fill;
+  width: $svg-width;
+  height: $svg-height;
+}
+
+@mixin display($display) {
+  display: $display;
+}
+
+@mixin border {
+  @content
+}
+
+@mixin border-radius {
+  @content
+}
+
+@mixin before-after($way-to, $value) {
+  content: '';
+  background-image: url("../img/#{$way-to}.#{$value}");
+}
+
+@mixin circle {
+  content: '';
+  border-radius: 50%;
+  @include border {
+    border: 2px solid $olive;
+  }
+  width: 16px;
+  height: 16px;
+  margin: auto;
+}
+
+@mixin yellow-circle {
+  background-color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fede06;
+}
+
+@mixin yellow-dash {
+  content: '';
+  width: 1px;
+  height: 38px;
+  background-color: $yellow;
+}
+
+@mixin little-circle {
+  width: 10px;
+  height: 10px;
+}
+
+@mixin centering {
+  margin: auto;
+  display: block;
+}
+
+@mixin tablet-pict {
+  width: 340px;
+  height: 220px;
+}
+
+@mixin eat-title {
+  width: 11px;
+  height: 18px;
+  @include position {
+    position: absolute;
+    left: 4%;
+    top: 25px;
+  }
+}
+
+@mixin transition($value, $speed, $number) {
+  -webkit-transition: $value $speed $number;
+  -moz-transition: $value $speed $number;
+  -o-transition: $value $speed $number;
+  -ms-transition: $value $speed $number;
+  transition: $value $speed $number;
+}
+
+@mixin transition-out {
+  -webkit-transition: none!important;
+  -moz-transition: none!important;
+  -o-transition: none!important;
+  -ms-transition: none!important;
+  -webkit-transform: none!important;
+  -moz-transform: none!important;
+  -o-transform: none!important;
+  -ms-transform: none!important;
+  transform: none!important;
+  left: auto!important;
+}

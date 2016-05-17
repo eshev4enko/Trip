@@ -1,0 +1,518 @@
+
+.details-map {
+  @include position {
+    position: relative;
+    top: 0;
+  }
+  width: $width;
+  height: $height;
+
+  iframe {
+    height: 100vh;
+    @include display(block);
+  }
+}
+
+.right-yellow-arrow {
+  background-color:  #fede06;
+  box-shadow: 1px 3px 0px 0px #dfc40a;
+  height: 60px;
+  width: 49px;
+  @include border-radius {
+    border-radius: 10px 0 0 10px;
+  }
+  @include position {
+    position: absolute;
+    right: 0;
+    top: 115px;
+  }
+  cursor: $pointer;
+  z-index: 2;
+
+  .fa {
+    @include font(700, 2.5em, 1.2, "FontAwesome");
+    color: $dark-lighten;
+    padding: ($padding / 2 - 5) ($padding + 3);
+
+    @media #{$md-desktop} {
+      padding: ($padding / 2 - 5) 15px;
+    }
+  }
+
+  @media #{$md-desktop} {
+    width: 40px;
+    height: 40px;
+    @include position {
+      position: absolute;
+      left: 561px;
+      top: 95px;
+    }
+    @include border-radius {
+      border-radius: 0 10px 10px 0;
+    }
+
+    .fa {
+      font-size: 1.8em;
+      padding: ($padding / 4 - 3) ($padding - 3);
+    }
+  }
+}
+
+.left-yellow-arrow {
+  @extend .right-yellow-arrow;
+  @include border-radius {
+    border-radius: 0 10px 10px 0;
+  }
+  @include position {
+    position: absolute;
+    left: 0;
+    top: 115px;
+  }
+
+  .fa {
+    font-size: 2.5em;
+    padding: ($padding / 2 - 5) ($padding - 5);
+
+    @media #{$md-desktop} {
+      font-size: 1.8em;
+      padding: ($padding / 4 - 3) ($padding - 6);
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 5px;
+    height: 100vh;
+    @include display(block);
+    background-color: #fede06;
+    @include position {
+      position: absolute;
+      top: -34px;
+    }
+  }
+
+  @media #{$md-desktop} {
+    @include position {
+      position: absolute;
+      left: 0;
+      top: 94px;
+    }
+
+    &:after {
+      top: -34px;
+    }
+  }
+}
+
+.left-content {
+  position: absolute;
+  background-color: #fafaf2;
+  width: $width;
+  height: 100vh;
+  overflow: auto;
+  @include transition(width, ease, 0.5s);
+  z-index: 1;
+
+  @media #{$md-desktop} {
+    width: 560px;
+  }
+
+  .carousel {
+    @include position {
+      position: relative;
+    }
+    background-color: $white;
+    width: 450px;
+    margin: $auto;
+    z-index: 1;
+
+    @media #{$md-desktop} {
+      width: 360px;
+    }
+
+    .carousel-inner {
+      border-radius: 5px;
+      @include border {
+        border: 2px solid $yellow;
+      }
+
+      .item {
+        float: left;
+        @include border {
+          border-right: 1px solid $yellow;
+        }
+        width: 33.334%;
+        display: block;
+        transition: none;
+        transform: none;
+        left: auto;
+
+        &:last-child {
+          @include border {
+            border-right: none;
+          }
+        }
+
+        span {
+          @include font(300, 1.5em, 1.2, "HelveticaNeueLight");
+          @include display(inline-block);
+          color: #453c25;
+          text-align: center;
+          padding: ($padding / 2 - 1) 21%;
+
+          @media #{$md-desktop} {
+            font-size: $md-desktop-size;
+            padding: 6px 28%;
+            width: auto;
+          }
+        }
+
+        &.active {
+            background-color: $yellow;
+            @include transition-out;
+        }
+
+        &.next.left,
+        &.prev.right,
+        &.active,
+        &.prev,
+        &.active.left,
+        &.active.right {
+          @include transition-out;
+          @include position {
+            position: relative;
+          }
+        }
+
+        @media all and (transform-3d), (-webkit-transform-3d) {
+           &.next.left,
+           &.prev.right,
+           &.active,
+           &.prev,
+           &.active.left,
+           &.active.right {
+              @include transition-out;
+              @include position {
+                position: relative;
+              }
+          }
+        }
+      }
+    }
+  }
+
+  .top-data {
+    @include position {
+      position: relative;
+    }
+    right: 7%;
+    width: $left-container;
+    margin: ($margin * 2) auto ($margin + 10) auto;
+
+    .carousel-control {
+      width: 5%;
+      @include position {
+        position: absolute;
+        top: 7px;
+      }
+
+      &.left {
+          left: 43px;
+
+        @media #{$md-desktop} {
+          left: 13%;
+        }
+      }
+
+      &.right {
+        right: 25px;
+
+        @media #{$md-desktop} {
+          right: 9%;
+        }
+      }
+
+      .fa {
+        @include font(700, 1.8em, 1.2, "FontAwesome");
+        color: $dark-lighten;
+
+        @media #{$md-desktop} {
+          font-size: 1.2em;
+        }
+      }
+
+      @media #{$md-desktop} {
+        top: 4px;
+      }
+    }
+
+    @media #{$md-desktop} {
+      width: $auto;
+    }
+
+    @media #{$tablet} {
+      right: 0;
+    }
+  }
+
+  .eat-box {
+    @include border-radius {
+      border-radius: 10px;
+    }
+    @include border {
+      border: 1px solid #e4e3d2;
+    }
+    @include position {
+      position: relative;
+    }
+    background-color:  $white;
+    box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.1);
+    width: $left-container;
+    margin: $auto;
+
+    @media #{$md-desktop} {
+      width: 468px;
+    }
+
+    .eat-box-inner {
+      padding: ($padding + 2) 0 ($padding + 2) ($padding * 2 + 10);
+      @include position {
+        position: relative;
+      }
+      cursor: $pointer;
+
+      .first-title-place {
+        @include font(500, 2em, 1.2, "HelveticaNeueRoman");
+        color: $dark-night;
+        @include display(inline-block);
+
+        @media #{$md-desktop} {
+           font-size: 1.3em;
+        }
+      }
+
+      .second-title-place {
+        @extend .first-title-place;
+      }
+
+      .third-title-place {
+        @extend .first-title-place;
+      }
+
+      .clock-pict {
+        @include svg($dark-lighten, 21px, 22px);
+        @include position {
+          position: absolute;
+          right: 14%;
+          top: 26px;
+        }
+
+        @media #{$md-desktop} {
+          @include svg($dark-lighten, 13px, 13px);
+          right: 13%;
+          top: 25px;
+        }
+      }
+
+      .eat-pict {
+        @include svg($dark-lighten, 20px, 33px);
+        @include position {
+          position: absolute;
+          left: 17px;
+          top: 21%;
+        }
+
+        @media #{$md-desktop} {
+          width: 11px;
+          height: 18px;
+          left: 14px;
+          top: 28%;
+        }
+      }
+
+      .basket-pict {
+        @include svg($dark-lighten, 30px, 28px);
+        @include position {
+          position: absolute;
+          left: 10px;
+          top: 21%;
+        }
+
+        @media #{$md-desktop} {
+          width: 18px;
+          height: 16px;
+          left: 10px;
+          top: 28%;
+        }
+      }
+
+      .clock {
+        @include font(500, 1.5em, 1.2, "HelveticaNeueRoman");
+        color: $dark-lighten;
+        float: right;
+        margin-right: $margin;
+        padding-top: 2px;
+
+        @media #{$md-desktop} {
+          font-size: $md-desktop-size;
+        }
+      }
+
+      .place {
+        @include font(500, 1.5em, 1.2, "HelveticaNeueRoman");
+        color:  #a1a094;
+        @include display(block);
+
+        @media #{$md-desktop} {
+          font-size: $md-desktop-size;
+        }
+      }
+
+      @media #{$md-desktop} {
+        padding-left: ($margin * 2 - 5);
+      }
+
+    }
+
+    .eat-pict-box {
+      img {
+        width: $width;
+      }
+
+      @media #{$md-desktop} {
+        width: 467px;
+      }
+    }
+
+    figcaption {
+      @include font(500, 1.5em, 1.2, "HelveticaNeueRoman");
+      padding: ($padding / 2) $margin ($margin + 13);
+      color: $main-black;
+
+      @media #{$md-desktop} {
+        font-size: $md-desktop-size;
+      }
+    }
+
+    .blue-up {
+      @include font(400, 1.3em, 1.2, "FontAwesome");
+      color:  #2158d5;
+      @include position {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+      }
+      cursor: $pointer;
+    }
+
+    &:last-child {
+      margin-bottom: ($margin * 2 + 10);
+    }
+  }
+
+  .way-circle-wrap {
+    width: $left-container;
+    margin: $auto;
+
+    @media #{$md-desktop} {
+      width: 468px;
+    }
+  }
+
+  .way-circle {
+    @include yellow-circle;
+    width: 60px;
+    height: 60px;
+    margin: ($margin * 2 - 2) 0;
+    @include position {
+      position: relative;
+    }
+
+    &:before {
+      @include yellow-dash;
+      @include position {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+      }
+    }
+
+    &:after {
+      @include yellow-dash;
+      height: 40px;
+      @include position {
+        position: absolute;
+        top: 100%;
+        right: 50%;
+      }
+    }
+
+    .fa {
+      @include font(400, 1.7em, 1.2, "FontAwesome");
+      text-align: center;
+      @include display(block);
+      padding-top: ($padding / 2);
+
+      @media #{$md-desktop} {
+        font-size: 1.1em;
+        padding-top: 8px;
+      }
+    }
+
+    @media #{$md-desktop} {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.hidden {
+  width: 0;
+  @include transition(all, ease, 0.5s);
+  overflow: hidden;
+}
+
+.hidden-arrow {
+  left: 0;
+  @include transition(left, ease, 0.5s);
+}
+
+.trip-social {
+  @include display(none);
+
+    @media #{$md-desktop} {
+      @include display(block);
+      float: right;
+      margin: ($margin / 4) $margin 0;
+      @include position {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+    span {
+      @include font(500, 1em, 0.9, "HelveticaNeueRoman");
+      color: $dark-night;
+      @include position {
+        position: relative;
+        top: 4px;
+      }
+    }
+
+    a {
+      &:nth-of-type(2) {
+        .trip-social-icon {
+          width: 47px;
+        }
+      }
+
+      .fa-facebook-square,
+      .fa-twitter-square {
+        @include font(400, 2.5em, 1, "FontAwesome");
+        color: $dark-night;
+        padding: ($padding / 2 - 5);
+        vertical-align: middle;
+      }
+    }
+  }
+}

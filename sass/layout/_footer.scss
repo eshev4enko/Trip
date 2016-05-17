@@ -1,0 +1,74 @@
+/*==============================
+
+  #FOOTER
+
+==============================*/
+
+footer {
+  background-color:  #453c25;
+  padding: $padding;
+  position: relative;
+
+  @media #{$md-desktop} {
+    padding: ($padding - 4) 9%;
+  }
+
+  ul {
+    float: left;
+    @include display(inline-block);
+    min-width: ($width / 5);
+
+    li {
+      @include font(500, 1.2em, 1.4, "HelveticaNeueRoman");
+
+      @media #{$md-desktop} {
+        display: inline-block;
+        margin-right: ($margin);
+        line-height: 5;
+        font-size: $md-desktop-size;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  .footer-logo {
+    float: left;
+    @include display(inline-block);
+    width: ($width / 2 + 10);
+    text-align: center;
+    margin-top: $margin;
+  }
+
+  .footer-copy {
+    float: none;
+    text-align: right;
+
+      .footer-social {
+        text-align: right;
+        margin-top: 8px;
+
+        .fa {
+          @include font(400, 1.9em, 0.7, "FontAwesome");
+          color: $white;
+        }
+
+        .fa-facebook-square {
+          margin-right: 7px;
+        }
+      }
+
+    span {
+      @include font(500, 1.4em, 1, "HelveticaNeueRoman");
+      color:  #796b46;
+      display: $main-display;
+      margin-top: ($margin - 2);
+
+      @media #{$md-desktop} {
+        font-size: $md-desktop-size;
+      }
+    }
+  }
+}
